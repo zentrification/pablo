@@ -1,4 +1,13 @@
 //
+  Todo
+  1. add variables here for generating hrm
+     - font sizing options
+     - grid ?
+  2. add variables for adding css3-pie
+  3. media queries ??
+  4. functions/config for dealing with nice coloring, using a pallete ?, etc, go read
+
+//
   Notes
   1. Using normalize.css, so h1/h2/h3/etc are still font-weight: bold
      http://css-tricks.com/watch-your-font-weight/
@@ -6,23 +15,18 @@
      https://github.com/doctyper/compass-borderbox
 
 //
-  -khtml
-  -moz
-  -ms
-  -o
-  -webkit
+  -khtml -moz -ms -o -webkit
 @mixin experimental-property($property, $value, $vendors: moz webkit)
   @each $vendor in $vendors
     -#{$vendor}-#{$property}: $value
   #{$property}: $value
 
-.brtest
-  +experimental-property(border-radius, 15px)
-
 //
   w3 box model is conterintuitive
   toying with the idea of width = actual width
   http://www.quirksmode.org/css/box.html
+//
+  this sucks on ie6/7 apparently, investigate
 body
   +experimental-property(box-sizing, content-box, moz ms webkit)
 

@@ -1,6 +1,6 @@
 //
   does this work??
-.clearfix
+@mixin clearfix
   zoom: 1
   &:after
     clear: both
@@ -14,3 +14,6 @@
     line-height: 0
     width: 0
     height: 0
+
+.clearfix
+  +clearfix

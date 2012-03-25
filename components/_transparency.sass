@@ -1,5 +1,5 @@
 // Transparency mixin using CSS3 and browser specific methods
-=opacity($opacity)
+@mixin opacity($opacity)
   +experimental-property(opacity, $opacity, -khtml -moz -webkit)
 
   // IE 8
