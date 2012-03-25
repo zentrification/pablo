@@ -1,0 +1,18 @@
+//
+   Used to normalise select dropdowns 
+   Styles from formalize.me
+   @include normaliseSelect()
+=normaliseSelect
+  +experimental-property(border-radius, 0, -moz -webkit)
+  +experimental-property(box-sizing, border-box, -moz -webkit)
+
+  -webkit-appearance: none
+
+  -moz-background-clip: padding
+  -webkit-background-clip: padding
+  background-clip: padding-box
+
+  // IE7
+  *padding-top: 2px
+  *padding-bottom: 1px
+  *height: auto

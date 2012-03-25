@@ -1,0 +1,5 @@
+@mixin sprite($file, $row: 1, $col: 1, $width: 16px, $height: 16px)
+  background-position: $row * $width $col * $height
+  background-image: url($file)
+  height: $height
+  width: $width

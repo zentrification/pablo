@@ -1,0 +1,9 @@
+// Transparency mixin using CSS3 and browser specific methods
+=opacity($opacity)
+  +experimental-property(opacity, $opacity, -khtml -moz -webkit)
+
+  // IE 8
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=#{$opacity * 100})"
+  // IE 5-7
+  filter: alpha(opacity = $opacity * 100)
+  zoom: 1

@@ -1,0 +1,55 @@
+//
+  Notes
+  1. Using normalize.css, so h1/h2/h3/etc are still font-weight: bold
+     http://css-tricks.com/watch-your-font-weight/
+  2. Write something like this, a function to do height/width + padding + margin + border at once
+     https://github.com/doctyper/compass-borderbox
+
+//
+  -khtml
+  -moz
+  -ms
+  -o
+  -webkit
+@mixin experimental-property($property, $value, $vendors: moz webkit)
+  @each $vendor in $vendors
+    -#{$vendor}-#{$property}: $value
+  #{$property}: $value
+
+.brtest
+  +experimental-property(border-radius, 15px)
+
+//
+  w3 box model is conterintuitive
+  toying with the idea of width = actual width
+  http://www.quirksmode.org/css/box.html
+body
+  +experimental-property(box-sizing, content-box, moz ms webkit)
+
+//
+  reset - two options here
+  resets/normalize
+  resets/ericmeyer
+@import 'resets/normalize'
+
+//
+  styles for quick scaffolding
+@import 'scaffolding'
+
+//
+  components
+@import 'components/backgrounds'
+@import 'components/clearfix'
+@import 'components/fonts'
+@import 'components/forms'
+@import 'components/images'
+@import 'components/math'
+@import 'components/sprites'
+@import 'components/transparency'
+
+//
+  libs
+  @import 'libs/_silk_sprite'
+  @import 'libs/ie6fixes'
+  @import 'libs/triangle'
+  @import 'libs/css3please'

@@ -1,0 +1,71 @@
+RGB Functions
+------------------------------
+rgb($red, $green, $blue)            - Converts an rgb(red, green, blue) triplet into a color.
+rgba($red, $green, $blue, $alpha)   - Converts an rgba(red, green, blue, alpha) quadruplet into a color.
+rgba($color, $alpha)                - Adds an alpha layer to any color value.
+red($color)                         - Gets the red component of a color.
+green($color)                       - Gets the green component of a color.
+blue($color)                        - Gets the blue component of a color.
+mix($color-1, $color-2, [$weight])  - Mixes two colors together.
+
+HSL Functions
+------------------------------
+hsl($hue, $saturation, $lightness)    - Converts an hsl(hue, saturation, lightness) triplet into a color.
+hsla($hue, $saturation, $lightness, $alpha)     - Converts an hsla(hue, saturation, lightness, alpha) quadruplet into a color.
+hue($color)     - Gets the hue component of a color.
+saturation($color)    - Gets the saturation component of a color.
+lightness($color)     - Gets the lightness component of a color.
+adjust-hue($color, $degrees)    - Changes the hue of a color.
+lighten($color, $amount)    - Makes a color lighter.
+darken($color, $amount)     - Makes a color darker.
+saturate($color, $amount)     - Makes a color more saturated.
+desaturate($color, $amount)     - Makes a color less saturated.
+grayscale($color)     - Converts a color to grayscale.
+complement($color)    - Returns the complement of a color.
+invert($color)    - Returns the inverse of a color.
+
+Opacity Functions
+------------------------------
+alpha($color) / opacity($color)     - Gets the alpha component (opacity) of a color.
+rgba($color, $alpha)    - Add or change an alpha layer for any color value.
+opacify($color, $amount) / fade-in($color, $amount)     - Makes a color more opaque.
+transparentize($color, $amount) / fade-out($color, $amount)     - Makes a color more transparent.
+
+Other Color Functions
+------------------------------
+adjust-color($color, [$red], [$green], [$blue], [$hue], [$saturation], [$lightness], [$alpha]
+  Increase or decrease any of the components of a color.
+scale-color($color, [$red], [$green], [$blue], [$saturation], [$lightness], [$alpha]
+  Fluidly scale one or more components of a color.
+change-color($color, [$red], [$green], [$blue], [$hue], [$saturation], [$lightness], [$alpha]
+  Changes one or more properties of a color.
+
+String Functions
+------------------------------
+unquote($string)    - Removes the quotes from a string.
+quote($string)      - Adds quotes to a string.
+
+Number Functions
+------------------------------
+percentage($value)    - Converts a unitless number to a percentage.
+round($value)     - Rounds a number to the nearest whole number.
+ceil($value)    - Rounds a number up to the nearest whole number.
+floor($value)     - Rounds a number down to the nearest whole number.
+abs($value)     - Returns the absolute value of a number.
+
+List Functions
+------------------------------
+length($list)     - Returns the length of a list.
+nth($list, $n)    - Returns a specific item in a list.
+join($list1, $list2, [$separator])    - Joins together two lists into one.
+
+Introspection Functions
+------------------------------
+type-of($value)     - Returns the type of a value.
+unit($number)     - Returns the units associated with a number.
+unitless($number)     - Returns whether a number has units or not.
+comparable($number-1, $number-2)    - Returns whether two numbers can be added or compared.
+
+Miscellaneous Functions
+------------------------------
+if($condition, $if-true, $if-false)
